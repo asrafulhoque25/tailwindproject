@@ -1,0 +1,347 @@
+<!-- npx tailwindcss -i tailwind.css -o ./assets/css/style.css --watch -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/output.css" rel="stylesheet" />
+    <title>Protecting people</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- This is an example component -->
+
+    <!-- header -->
+    <header class="py-4">
+      <nav class="border-gray-200">
+        <div
+          class="container mx-auto lg:flex flex-wrap items-center justify-between"
+        >
+          <a href="#" class="flex">
+            <img src="assets/img/logo.png" alt="logo" />
+          </a>
+          <div class="hidden lg:block w-full md:w-auto" id="mobile-menu">
+            <ul
+              class="flex-col lg:flex-row flex pb-4 lg:pb-0 lg:space-x-8 mt-4 lg:mt-0 lg:text-sm lg:font-medium"
+            >
+              <!-- dropdown menu -->
+              <!-- <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                  class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Dropdown
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+
+                <div id="dropdownNavbar"
+                  class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                  <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Porque Studimatic</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Casos de uso</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Precios</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Soporte</a>
+                  </div>
+                </div>
+              </li> -->
+              <!--/ dropdown menu -->
+              <li class="mb-4 lg:mb-0">
+                <a
+                  href="#"
+                  class="text-sm text-black font-normal group hover:text-purple transition-all"
+                >
+                  About Moray Protects
+                </a>
+              </li>
+              <li class="mb-4 lg:mb-0">
+                <a
+                  href="#"
+                  class="text-sm text-black font-normal group hover:text-purple transition-all"
+                >
+                  Learning & Events
+                </a>
+              </li>
+              <li class="mb-4 lg:mb-0">
+                <a
+                  href="precios.html"
+                  class="text-sm text-black font-normal group hover:text-purple transition-all"
+                >
+                  News & Media
+                </a>
+              </li>
+              <li class="mb-4 lg:mb-0">
+                <a
+                  href="precios.html"
+                  class="text-sm text-black font-normal group hover:text-purple transition-all"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+            <div class="lg:hidden btn-wrap flex flex-wrap gap-4 items-center">
+              <a
+                href="#"
+                class="font-poppins font-medium text-sm text-white rounded-[10px] px-8 py-3 bg-lightYellow transition-all hover:bg-purple"
+              >
+                EXIT SITE
+              </a>
+            </div>
+          </div>
+          <div class="hidden lg:flex btn-wrap gap-4 items-center">
+            <a
+              href="#"
+              class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-8 py-3  bg-lightYellow transition-all hover:bg-purple"
+            >
+              EXIT SITE
+            </a>
+          </div>
+          <button
+            data-collapse-toggle="mobile-menu"
+            type="button"
+            class="lg:hidden text-gray-400 absolute top-[20px] right-[8%]"
+            aria-controls="mobile-menu-2"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              class="hidden w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!--/ header -->
+
+    <!-- banner -->
+
+    <section class="banner mt-8">
+      <div class="container mx-auto w-full">
+        <div class="banner-wrap grid grid-cols-3 gap-4">
+          <div
+            class="banner-item pt-12 px-6 pb-8 bg-purple flex items-center justify-center flex-col"
+          >
+            <img src="assets/img/Sbannerlogo1.png" alt="" />
+            <div class="flex btn-wrap gap-4 items-center mt-5">
+              <a
+                href="#"
+                class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-8 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div
+            class="banner-item pt-12 px-6 pb-8 bg-[#6787C1] flex items-center justify-center flex-col"
+          >
+            <img src="assets/img/bannerlogo2.png" alt="" />
+            <div class="flex btn-wrap gap-4 items-center mt-5">
+              <a
+                href="#"
+                class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-8 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div
+            class="banner-item pt-12 px-6 pb-8 bg-[#427D5F] flex items-center justify-center flex-col"
+          >
+            <img src="assets/img/bannerlogo3.png" alt="" />
+            <div class="flex btn-wrap gap-4 items-center mt-5">
+              <a
+                href="#"
+                class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-8 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div
+            class="banner-item pt-12 px-6 pb-8 bg-[#57BC89] flex items-center justify-center flex-col"
+          >
+            <img src="assets/img/bannerlogo4.png" alt="" />
+            <div class="flex btn-wrap gap-4 items-center mt-5">
+              <a
+                href="#"
+                class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-8 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div
+            class="banner-item pt-12 px-6 pb-8 bg-[#C45BB0] flex items-center justify-center flex-col"
+          >
+            <img src="assets/img/bannerlogo5.png" alt="" />
+            <div class="flex btn-wrap gap-4 items-center mt-5">
+              <a
+                href="#"
+                class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-8 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div
+            class="banner-item pt-12 px-6 pb-8 bg-[#465B81] flex items-center justify-center flex-col"
+          >
+            <img src="assets/img/bannerlogo6.png" alt="" />
+            <div class="flex btn-wrap gap-4 items-center mt-5">
+              <a
+                href="#"
+                class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-8 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/ banner -->
+
+    <!-- quote -->
+    <section class="quote py-[140px]">
+      <div class="container mx-auto w-full">
+        <div class="quote-wrap text-center max-w-[850px] w-full mx-auto">
+          <h4 class="text-3xl text-purple mb-0">
+            “People in Moray feel safe at home and in the community, because
+            collectively we can and will protect them from harm”
+          </h4>
+          <p class="text-sm text-black mt-8">
+            Protecting People involves everyone working together in partnership
+            to best safeguard and promote the welfare of adults, children, young
+            people and their families across Moray. Click the button below to
+            find out more.
+          </p>
+          <div class="flex btn-wrap gap-4 justify-center mt-8">
+            <a
+              href="#"
+              class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-8 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ quote -->
+
+    <!-- protecting people -->
+    <section class="protecting-people bg-gray h-[570px] flex items-center">
+      <div
+        class="container mx-auto w-full flex items-center justify-between gap-12"
+      >
+        <div class="protect-img shrink-0">
+          <img src="assets/img/protect.png" alt="" />
+        </div>
+        <div>
+          <h4 class="text-3xl text-purple">Protecting people from harm</h4>
+          <p class="text-black text-sm mt-8">
+            If someone you know is being harmed or is at risk of harm, it is
+            important that you tell us so we can help. You could be worried
+            about a child, young person, adult or older person. We know it can
+            be difficult to make the first move and tell us your concerns. But
+            we can – and will – help.
+          </p>
+          <p class="text-purple text-sm mt-8 font-bold">
+            If you're being harmed or think you're at risk of harm, then please
+            tell us. We can help keep you safe. Get in touch with us as soon as
+            you can.
+          </p>
+          <div class="flex btn-wrap gap-4 items-center mt-5">
+            <a
+              href="#"
+              class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-12 py-3 bg-lightYellow transition-all hover:bg-yellow-700 mt-5"
+            >
+              Contact us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ protecting people -->
+
+    <!-- blog -->
+    <section class="blog py-[120px]">
+      <div class="container mx-auto w-full">
+        <div class="blog-wrap grid grid-cols-2">
+          <div class="blog-item text-center max-w-[518px] w-full mx-auto">
+            <h4 class="text-3xl text-purple mb-6">Learning & Events</h4>
+            <img src="assets/img/blog1.png" class="mx-auto" alt="">
+            <p class="text-sm text-black mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus lacinia ex, nec venenatis ex. Maecenas eu tellus elit. Vestibulum et blandit nisl. Aliquam in enim et.</p>
+            <div class="flex btn-wrap gap-4 items-center justify-center mt-8">
+              <a
+                href="#"
+                class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-10 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div class="blog-item text-center max-w-[518px] w-full mx-auto">
+            <h4 class="text-3xl text-purple mb-6">News & Media</h4>
+            <img src="assets/img/blog2.png" class="mx-auto" alt="">
+            <p class="text-sm text-black mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus lacinia ex, nec venenatis ex. Maecenas eu tellus elit. Vestibulum et blandit nisl. Aliquam in enim et.</p>
+            <div class="flex btn-wrap gap-4 items-center justify-center mt-8">
+              <a
+                href="#"
+                class="hidden xl:block font-normal text-sm text-white rounded-[10px] px-10 py-3 bg-lightYellow transition-all hover:bg-yellow-700"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ blog -->
+
+    <!-- <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script> -->
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <!-- <script src="./assets/js/script.js"></script> -->
+  </body>
+</html>
